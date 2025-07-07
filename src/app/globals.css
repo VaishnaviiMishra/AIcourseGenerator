@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Theme - Pastel with Gray */
+    --background: 0 0% 98%;               /* Almost white */
+    --foreground: 240 6% 10%;             /* Dark charcoal */
+
+    --card: 0 0% 100%;                    /* Pure white */
+    --card-foreground: 240 6% 10%; 
+ 
+    --popover: 0 0% 100%; 
+    --popover-foreground: 240 6% 10%;  
+ 
+    --primary: 201 96% 70%;               /* Soft sky blue */
+    --primary-foreground: 240 6% 10%;     /* Dark text */
+ 
+    --secondary: 350 89% 80%;             /* Blush pink */
+    --secondary-foreground: 240 6% 10%; 
+ 
+    --muted: 240 5% 96%;                  /* Very light gray */
+    --muted-foreground: 240 4% 46%;       /* Medium gray */
+ 
+    --accent: 142 76% 80%;                /* Mint green */
+    --accent-foreground: 240 6% 10%; 
+ 
+    --destructive: 0 84% 70%;             /* Coral red */
+    --destructive-foreground: 0 0% 100%;  /* White text */
+
+    --border: 240 6% 90%;                 /* Light gray */
+    --input: 240 6% 90%; 
+    --ring: 201 96% 70%;                  /* Sky blue ring */
+ 
+    --radius: 0.75rem;                    /* Slightly rounded */
+  }
+ 
+  .dark {
+    /* Dark Theme - Deep Gray with Pastel Accents */
+    --background: 240 6% 12%;             /* Dark charcoal */
+    --foreground: 240 6% 95%;             /* Off-white */
+ 
+    --card: 240 6% 15%;                   /* Slightly lighter */
+    --card-foreground: 240 6% 95%; 
+ 
+    --popover: 240 6% 15%; 
+    --popover-foreground: 240 6% 95%; 
+ 
+    --primary: 201 96% 70%;               /* Same sky blue */
+    --primary-foreground: 240 6% 10%;     /* Dark text */
+ 
+    --secondary: 350 89% 75%;             /* Slightly deeper pink */
+    --secondary-foreground: 240 6% 95%; 
+ 
+    --muted: 240 6% 20%;                  /* Dark gray */
+    --muted-foreground: 240 6% 70%;       /* Light gray text */
+ 
+    --accent: 142 76% 65%;                /* Deeper mint */
+    --accent-foreground: 240 6% 95%; 
+ 
+    --destructive: 0 84% 65%;             /* Darker coral */
+    --destructive-foreground: 0 0% 100%; 
+ 
+    --border: 240 6% 25%;                 /* Dark border */
+    --input: 240 6% 25%; 
+    --ring: 201 96% 70%;                  /* Sky blue ring */
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
