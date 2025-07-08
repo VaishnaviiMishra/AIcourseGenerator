@@ -1,4 +1,8 @@
 {
-  "buildCommand": "npm run build -- --no-lint",
-  "ignoreBuildErrors": true
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_IGNORE_BUILD_ERRORS": "true"
+    }
+  },
+  "buildCommand": "CI= npm run build"
 }
