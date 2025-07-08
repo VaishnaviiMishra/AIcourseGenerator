@@ -4,7 +4,7 @@ import { prisma } from "@/src/lib/db";
 
 import React from "react";
 
-type Props = {};
+type Props = object;
 
 const GalleryPage = async (props: Props) => {
   const courses = await prisma.course.findMany({

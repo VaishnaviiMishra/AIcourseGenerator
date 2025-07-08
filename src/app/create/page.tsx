@@ -6,7 +6,7 @@ import CreateCourseForm from "@/src/components/CreateCourseForm";
 import { checkSubscription } from "@/src/lib/subscription";
 import { getAuthSession } from "@/src/lib/auth";
 
-type Props = {};
+type Props = object;
 
 const CreatePage = async (props: Props) => {
   const session = await getAuthSession();

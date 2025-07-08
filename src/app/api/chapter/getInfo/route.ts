@@ -11,7 +11,7 @@ const bodyParser = z.object({
   chapterId: z.string(),
 });
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { chapterId } = bodyParser.parse(body);
@@ -31,7 +31,7 @@ export async function POST(req: Request, res: Response) {
     }
     const videoId = await searchYoutube(chapter.youtubeSearchQuery);
     let transcript = await getTranscript(videoId);
-    let maxLength = 500;
+    const maxLength = 500;
     transcript = transcript.split(" ").slice(0, maxLength).join(" ");
 
     const { summary }: { summary: string } = await strict_output(
