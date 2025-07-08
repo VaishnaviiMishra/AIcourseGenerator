@@ -15,7 +15,7 @@ const Navbar = async (props: Props) => {
       <div className="flex items-center justify-between h-full gap-4 px-4 mx-auto sm:px-6 max-w-7xl">
         {/* Logo/Brand */}
         <Link 
-          href="/gallery" 
+          href="/" 
           className="flex items-center gap-2 group transition-all duration-200"
         >
           <p className="rounded-lg border-2 border-b-4 border-r-4 border-pink-500 dark:border-white px-3 py-1 text-xl font-bold text-primary-600 dark:text-primary-400 transition-all hover:-translate-y-[2px] hover:shadow-md active:translate-y-0 active:shadow-none">
@@ -60,7 +60,7 @@ const Navbar = async (props: Props) => {
               {session?.user ? (
                 <UserAccountNav user={session.user} />
               ) : (
-                <div className="px-3 py-1.5 text-sm font-medium rounded-md bg-primary-600 hover:bg-primary-700 text-white transition-colors">
+                <div className="px-3 py-1.5 text-sm font-medium rounded-md bg-slate-800 hover:bg-primary-700 text-white transition-colors">
                   <SignInButton />
                 </div>
               )}
